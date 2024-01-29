@@ -18,10 +18,20 @@
   display: flex;
   align-items: center;
 }
+.search,.search-result{
+  width: 500px;
+}
+
+.search-tittle{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(22, 24, 35, 0.75);
+  padding: 5px 12px 3px;
+}
 
 .search {
   position: relative;
-  width: 500px;
   height: 46px;
   display: flex;
   background: rgba(22, 24, 35, 0.06);
@@ -84,4 +94,12 @@ input:not(:placeholder-shown)~ .search-btn{
   top: 50%;
   transform: translateY(-50%);
   color: rgba(22, 24, 35, 0.34);
+}
+
+.actions{
+  display: flex;
+}
+
+.iconplus{
+  padding-right: 16px;
 }
