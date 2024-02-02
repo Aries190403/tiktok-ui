@@ -98,8 +98,44 @@ input:not(:placeholder-shown)~ .search-btn{
 
 .actions{
   display: flex;
+  align-items: center;
 }
 
 .iconplus{
   padding-right: 16px;
+}
+
+.more{
+  font-size: 2rem;
+  background-color: transparent;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.icon-btn-user{
+  width: 26px;
+  height: 26px;
+  font-size: 2.4rem;
+  background-color: transparent;
+  margin-left: 16px;
+  padding: 3px 3px 0 3px;
+}
+
+.icon-btn-user2{
+  width: 26px;
+  height: 26px;
+  font-size: 4.3rem;
+  background-color: transparent;
+  margin-left: 16px;
+  padding: 3px 3px 0 3px;
+}
+
+.current-user-avatar{
+  margin-left: 24px;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background: center center / cover no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
 }
