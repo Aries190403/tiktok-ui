@@ -4,7 +4,7 @@
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
   height: var(--default-layout-header-height, 60px);
   width: 100%;
-  padding: 0 10px 0;
+  padding: 0 14px 0;
 }
 
 .inner {
@@ -18,11 +18,12 @@
   display: flex;
   align-items: center;
 }
-.search,.search-result{
+
+.search, .search-result {
   width: 500px;
 }
 
-.search-tittle{
+.search-tittle {
   font-weight: 600;
   font-size: 14px;
   line-height: 22px;
@@ -47,9 +48,10 @@
     background-color: transparent;
     caret-color: var(--primary);
   }
-input:not(:placeholder-shown)~ .search-btn{
-  color: rgba(22,24,35,0.75);
-}
+
+  input:not(:placeholder-shown) ~ .search-btn {
+    color: rgba(22, 24, 35, 0.75);
+  }
 
   &::after {
     position: absolute;
@@ -83,36 +85,50 @@ input:not(:placeholder-shown)~ .search-btn{
     background-color: rgba(22, 24, 35, 0.06);
   }
 
-  &:active{
-  background-color: rgba(22, 24, 35, 0.03);
-}
+  &:active {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
 }
 
 .clear, .load {
   position: absolute;
-  right: 52px;
+  right: 60px;
   top: 50%;
   transform: translateY(-50%);
   color: rgba(22, 24, 35, 0.34);
+  cursor: pointer;
 }
 
-.actions{
+.load {
+animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: translateY(-50%) rotate(0);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.actions {
   display: flex;
   align-items: center;
 }
 
-.iconplus{
+.iconplus {
   padding-right: 16px;
 }
 
-.more{
+.more {
   font-size: 2rem;
   background-color: transparent;
   padding: 8px;
   cursor: pointer;
 }
 
-.icon-btn-user{
+.icon-btn-user {
   width: 26px;
   height: 26px;
   font-size: 2.4rem;
@@ -121,7 +137,7 @@ input:not(:placeholder-shown)~ .search-btn{
   padding: 3px 3px 0 3px;
 }
 
-.icon-btn-user2{
+.icon-btn-user2 {
   width: 26px;
   height: 26px;
   font-size: 4.3rem;
@@ -130,7 +146,7 @@ input:not(:placeholder-shown)~ .search-btn{
   padding: 3px 3px 0 3px;
 }
 
-.current-user-avatar{
+.current-user-avatar {
   margin-left: 24px;
   position: relative;
   width: 32px;
@@ -138,4 +154,20 @@ input:not(:placeholder-shown)~ .search-btn{
   background: center center / cover no-repeat;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.sup-badge {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  left: 16px;
+  background: rgb(254, 44, 85);
+  min-width: 23px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  position: relative;
+  top: -247%;
 }
