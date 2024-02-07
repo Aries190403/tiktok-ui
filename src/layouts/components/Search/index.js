@@ -1,13 +1,13 @@
 import classNames from 'classnames/bind';
-import Style from '~/components/Layout/components/Header/Header.module.scss';
-import Wrapper from '../../../Popper/Wrapper';
-import AccountItem from '~/components/Layout/components/AccountItem';
+import Style from '~/layouts/components/Header/Header.module.scss';
+import Wrapper from '../../../components/Popper/Wrapper';
+import AccountItem from '~/layouts/components/AccountItem';
 import useDebounce from '~/components/hooks/useDebounce';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faSearch, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import { useEffect, useRef, useState } from 'react';
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchServices';
 
 const cx = classNames.bind(Style);
 
@@ -48,13 +48,14 @@ function Search() {
     };
 
     const handleChangeInput = (event) => {
-        if (event.target.value === ' ') return;
-        setSearchValue(event.target.value);
+        if (!event.target.value.startsWith(' '))
+            setSearchValue(event.target.value);
     };
 
     return (
         <Tippy
             interactive
+            appendTo={()=>document.body}
             visible={showResult && searchResult.length > 0}
             render={(attrs) => (
                 <div className={cx('search-result')} tabIndex='-1' {...attrs}>
@@ -68,7 +69,6 @@ function Search() {
             )}
             onClickOutside={handleHiddenResult}
         >
-
             <div className={cx('search')}>
                 <input ref={inputRef} value={searchValue} type='text' placeholder='Tìm kiếm' spellCheck='false'
                        onChange={handleChangeInput} onFocus={() => setShowResult(true)} />
@@ -77,7 +77,8 @@ function Search() {
                     </button>
                 )}
                 {loading && <FontAwesomeIcon className={cx('load')} icon={faSpinner} />}
-                <button className={cx('search-btn')}><FontAwesomeIcon icon={faSearch} /></button>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()} ><FontAwesomeIcon icon={faSearch} />
+                </button>
             </div>
         </Tippy>
     );

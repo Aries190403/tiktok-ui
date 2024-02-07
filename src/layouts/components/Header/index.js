@@ -17,14 +17,15 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tip from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-
-import images from '~/assets/images';
 import Styles from './Header.module.scss';
-import Button from '~/components/Layout/components/Button';
+import Button from '~/layouts/components/Button';
 import Menu from '~/components/Popper/Menu';
 import { MessageIcon, NotificationIcon } from '~/components/Icon';
 import Image from '~/components/Image';
-import Search from '~/components/Layout/components/Search';
+import Search from '~/layouts/components/Search';
+import { Link } from 'react-router-dom';
+import images from '~/assets/images';
+import config from '~/config';
 
 const cx = classNames.bind(Styles);
 const MENU_ITEMS = [
@@ -104,8 +105,10 @@ function Header() {
     const currentUser = true;
     return (<header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
-                    <Image src={images.logo} alt='TikTok' />
+                <div>
+                    <Link to={config.routes.home} className={cx('logo')}>
+                        <Image src={images.logo} alt='TikTok' />
+                    </Link>
                 </div>
                 <Search />
 

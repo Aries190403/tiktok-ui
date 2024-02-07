@@ -36,6 +36,7 @@ function Menu({
             interactive={true}
             delay={[0, 700]}
             placement='bottom-end'
+            hideOnClick='false'
             render={(attrs) => (
                 <div className={cx('menu-items')} tabIndex='-1' {...attrs}>
                     <Wrapper>
@@ -43,7 +44,7 @@ function Menu({
                             setHis((prev) => prev.slice(0, prev.length - 1),
                             );
                         }} />}
-                        {renderItem()}
+                        <div className={cx('menu-scroll')}>{renderItem()}</div>
                     </Wrapper>
                 </div>
             )}
