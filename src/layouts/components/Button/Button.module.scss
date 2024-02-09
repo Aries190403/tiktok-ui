@@ -8,6 +8,8 @@
   cursor: pointer;
   background-color: var(--white);
   border: 1px solid transparent;
+  text-align: center;
+  align-items: center;
 
   + .wrapper {
     margin: 0 16px;
@@ -28,6 +30,8 @@
 .primary {
   color: var(--white);
   background-color: var(--primary);
+  align-items: center;
+  display: flex;
 
   &:hover {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
@@ -37,6 +41,10 @@
 .outline {
   color: var(--primary);
   border-color: currentColor;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  margin: auto;
 
   &:hover {
     background-color: rgba(254, 44, 85, 0.08);;
@@ -51,6 +59,8 @@
   background: rgb(255, 255, 255);
   font-size: 1.6rem;
   font-weight: 600;
+  align-items: center;
+  display: flex;
 
   &:hover {
     background-color: rgba(22, 24, 35, 0.03);
@@ -85,6 +95,7 @@
   min-height: 40px;
   padding: 6px 8px;
   font-size: 1.6rem;
+  padding-left: 42px;
 }
 
 .scroll {

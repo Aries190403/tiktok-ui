@@ -102,7 +102,7 @@ function Header() {
     const handleMenuChange = (menuItem) => {
         console.log(menuItem);
     };
-    const currentUser = true;
+    const currentUser = false;
     return (<header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div>
@@ -137,7 +137,7 @@ function Header() {
                                 <FontAwesomeIcon className={cx('iconplus')} icon={faPlus} />
                                 Tải lên
                             </Button>
-                                <Button primary>Đăng nhập</Button>
+                                <Button primary to="/">Đăng nhập</Button>
                             </>
                         )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>

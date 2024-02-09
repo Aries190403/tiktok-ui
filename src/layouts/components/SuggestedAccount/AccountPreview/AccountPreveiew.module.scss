@@ -1,0 +1,49 @@
+.wrapper{
+  padding: 20px;
+  width: 280px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info{
+  margin-top: 12px;
+}
+
+.username{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.check{
+  font-size: 1.4rem;
+  color: aqua;
+  margin-left: 4px;
+}
+
+.name{
+  font-size: 1.6rem;
+}
+
+.analytics{
+  margin-top: 10px;
+  font-size: 1.6rem;
+}
+
+.value{
+  margin-left: 12px;
+}
+
+.label{
+  color: var(--text-color);
+}

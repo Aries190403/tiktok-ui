@@ -3,7 +3,9 @@
     following:'/following',
     profile:'/:nickname',
     upload:'/upload',
-    search:'/search',
+    friend:'/friend',
+    me:'/me',
+    discover:'/discover',
 };
 
 export default routes;
