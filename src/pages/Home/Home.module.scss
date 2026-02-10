@@ -1,0 +1,99 @@
+.wrapper {
+  width: min(100%, 760px);
+  padding: 24px 0 40px;
+}
+
+.feed-item {
+  display: flex;
+  gap: 12px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+}
+
+.meta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+
+  strong {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  span {
+    font-size: 1.4rem;
+    color: rgba(22, 24, 35, 0.75);
+  }
+}
+
+.description {
+  margin-top: 2px;
+  font-size: 1.6rem;
+}
+
+.music {
+  margin-top: 4px;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.video-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.video {
+  width: min(340px, 100%);
+  aspect-ratio: 9/16;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #000;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(22, 24, 35, 0.06);
+    font-size: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(22, 24, 35, 0.12);
+    }
+  }
+
+  span {
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

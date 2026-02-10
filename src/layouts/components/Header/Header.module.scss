@@ -13,7 +13,10 @@
 }
 
 .inner {
+  width: min(1320px, 100%);
   height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
   align-items: center;
   display: flex;
   justify-content: space-between;
