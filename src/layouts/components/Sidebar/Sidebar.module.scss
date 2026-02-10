@@ -1,4 +1,46 @@
-.wrapper{
-  width: 224px;
-  padding: 20px 0 24px 8px;
+.wrapper {
+  width: 356px;
+  height: calc(100vh - var(--default-layout-header-height));
+  overflow-y: auto;
+  position: sticky;
+  top: var(--default-layout-header-height);
+  padding: 20px 8px 24px 0;
+}
+
+.login-box {
+  border-top: 1px solid rgba(22, 24, 35, 0.12);
+  border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+  margin: 8px 0 16px;
+  padding: 20px 8px;
+
+  p {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-bottom: 16px;
+  }
+}
+
+.login-btn {
+  width: 100%;
+  font-weight: 700;
+}
+
+.footer {
+  border-top: 1px solid rgba(22, 24, 35, 0.12);
+  margin-top: 12px;
+  padding: 16px 8px;
+
+  p {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  span {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
 }
